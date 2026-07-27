@@ -24,7 +24,7 @@ public class TestController {
         return ApiResponse.ofSuccess("请求成功获取到了数据！");
     }
 
-    @GetMapping("/business-error")
+        @GetMapping("/business-error")
     public ApiResponse<String> businessError() {
         // 模拟抛出自定义的业务异常，GlobalExceptionHandler 会拦截并包装为 ApiResponse 返回
         throw new BaseException(Status.BUSINESS_ERROR);
