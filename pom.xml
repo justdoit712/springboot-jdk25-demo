@@ -18,12 +18,12 @@
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!-- 使用较新的 Spring Boot 版本以支持高版本 JDK -->
-        <spring.boot.version>3.3.0</spring.boot.version>
+        <spring.boot.version>3.5.0</spring.boot.version>
     </properties>
 
     <modules>
-        <!-- 后续我们会在这里添加诸如 demo-helloworld 等子模块 -->
+        <module>demo-01-helloworld</module>
+        <module>demo-02-properties</module>
     </modules>
 
     <dependencyManagement>
@@ -49,10 +49,13 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <!-- 如果需要体验 JDK 25 的预览特性，可以取消下面两行的注释 -->
-                        <!-- <compilerArgs> -->
-                        <!--     <arg>--enable-preview</arg> -->
-                        <!-- </compilerArgs> -->
+                        <!-- 如果需要体验 JDK 25 的预览特性，可以加入如下配置 -->
+                        <!-- (注意: XML 注释内部不允许出现双横杠，如果取消注释，请手动将下面的 - - 改为相连的双横杠) -->
+                        <!-- 
+                        <compilerArgs>
+                            <arg>- -enable-preview</arg>
+                        </compilerArgs>
+                        -->
                     </configuration>
                 </plugin>
                 <plugin>

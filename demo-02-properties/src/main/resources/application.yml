@@ -1,0 +1,14 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /demo
+
+# 自定义配置
+developer:
+  name: justdoit712
+  website: https://github.com/justdoit712
+  age: 25
+  skills:
+    - Java
+    - Spring Boot
+    - Kubernetes
