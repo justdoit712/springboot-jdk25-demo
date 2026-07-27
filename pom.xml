@@ -24,6 +24,7 @@
     <modules>
         <module>demo-01-helloworld</module>
         <module>demo-02-properties</module>
+        <module>demo-03-exception-handler</module>
     </modules>
 
     <dependencyManagement>
