@@ -1,5 +1,9 @@
 # Spring Boot JDK 25 Demo
 
+<p align="center">
+  <span>中文 | <a href="./README.en.md">English</a></span>
+</p>
+
 这是一个基于 **JDK 25** 和 **Spring Boot 3.x** 的现代化 Java 后端学习项目。
 
 ## 特性说明
