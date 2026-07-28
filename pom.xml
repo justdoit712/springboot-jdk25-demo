@@ -27,6 +27,7 @@
         <module>demo-03-exception-handler</module>
         <module>demo-04-actuator</module>
         <module>demo-04-actuatorpro</module>
+        <module>demo-05-mybatis</module>
     </modules>
 
     <dependencyManagement>
@@ -52,6 +53,8 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
+                        <!-- Spring Boot 3.2+ 必须开启 parameters 才能通过反射获取参数名 -->
+                        <parameters>true</parameters>
                         <!-- 如果需要体验 JDK 25 的预览特性，可以加入如下配置 -->
                         <!-- (注意: XML 注释内部不允许出现双横杠，如果取消注释，请手动将下面的 - - 改为相连的双横杠) -->
                         <!-- 
