@@ -1,0 +1,17 @@
+server:
+  port: 8087
+  servlet:
+    context-path: /demo
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 连接到本地 MySQL 数据库 demo-jdk25
+    url: jdbc:mysql://localhost:3306/demo-jdk25?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456 # 请根据您本机的实际密码进行修改
+
+mybatis-plus:
+  configuration:
+    # 开启控制台打印 SQL 语句，方便我们观察底层生成了什么 SQL
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
