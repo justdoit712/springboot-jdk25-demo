@@ -1,0 +1,23 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /demo
+
+# Actuator 监控配置
+management:
+  server:
+    # 建议将监控端口和业务端口分离，提高安全性
+    port: 8084
+  endpoints:
+    web:
+      exposure:
+        # 暴露所有监控端点（为了演示方便，生产环境请按需暴露，如："health,info"）
+        include: "*"
+  endpoint:
+    health:
+      # 总是显示详细的健康检查信息
+      show-details: always
+  info:
+    env:
+      # 允许通过 info 端点暴露系统环境变量等信息
+      enabled: true
