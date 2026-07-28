@@ -1,0 +1,15 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /demo
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB # 单个文件最大大小
+      max-request-size: 100MB # 单个请求（可能包含多文件）最大大小
+
+# 自定义上传文件的保存路径（这里演示保存在 D 盘根目录下的 upload 文件夹中）
+upload:
+  path: D:/upload/

@@ -29,6 +29,7 @@
         <module>demo-04-actuatorpro</module>
         <module>demo-05-mybatis</module>
         <module>demo-06-mybatis-plus</module>
+        <module>demo-07-upload</module>
     </modules>
 
     <dependencyManagement>
