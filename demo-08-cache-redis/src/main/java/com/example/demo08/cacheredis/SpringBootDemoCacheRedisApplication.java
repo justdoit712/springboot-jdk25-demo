@@ -24,8 +24,8 @@ public class SpringBootDemoCacheRedisApplication {
 
         System.out.println("\n----------------------------------------------------------\n\t" +
                 "Application Redis Cache Demo started successfully!\n\t" +
-                "Manual Set Test: \thttp://localhost:" + port + path + "/redis/set?key=hello&value=world\n\t" +
-                "Cacheable Test: \thttp://localhost:" + port + path + "/redis/user/1\n" +
+                "原生测试: \t\thttp://localhost:" + port + path + "/redis/native/set-string?key=nativeKey&value=nativeValue\n\t" +
+                "自定义配置测试: \thttp://localhost:" + port + path + "/redis/custom/set-string?key=customKey&value=customValue\n" +
                 "----------------------------------------------------------");
     }
 }

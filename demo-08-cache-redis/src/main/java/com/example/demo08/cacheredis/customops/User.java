@@ -1,14 +1,14 @@
-package com.example.demo08.cacheredis.entity;
+package com.example.demo08.cacheredis.customops;
 
 import java.io.Serializable;
 
 /**
  * <p>
- * 用户实体类 (实现 Serializable 是为了允许对象在网络中传输以及保存在 Redis 缓存中)
+ * 用户实体类 (实现 Serializable 是为了允许原生 JDK 序列化)
  * </p>
  *
  * @author justdoit712
- * @date Created in 2026-07-30 18:55
+ * @date Created in 2026-07-30 19:22
  */
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
