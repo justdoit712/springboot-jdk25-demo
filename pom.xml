@@ -35,6 +35,7 @@
         <module>demo-10-task</module>
         <module>demo-11-smart-doc</module>
         <module>demo-12-springdoc</module>
+        <module>demo-13-spring-data-jdbc</module>
     </modules>
 
     <dependencyManagement>

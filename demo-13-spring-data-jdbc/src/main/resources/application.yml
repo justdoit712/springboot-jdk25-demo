@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    # 使用 H2 内存数据库，避免了繁琐的环境配置，项目关闭数据自动销毁
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+  sql:
+    init:
+      # 开启启动时自动执行 schema.sql 和 data.sql
+      mode: always
+
+  # 开启 H2 的 Web 控制台，方便我们在浏览器中直接查看数据库里的数据
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      
+# 配置日志，打印出 Spring Data JDBC 帮我们生成的底层 SQL 语句
+logging:
+  level:
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
