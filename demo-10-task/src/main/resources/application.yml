@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  task:
+    scheduling:
+      # 配置定时任务的线程池大小，默认为 1（单线程串行执行）
+      # 这里配置为 20，表示可以同时有 20 个定时任务并发执行
+      pool:
+        size: 20
+      # 定时任务线程的名称前缀，方便在日志中区分
+      thread-name-prefix: Job-Thread-

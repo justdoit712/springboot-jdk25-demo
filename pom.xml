@@ -32,6 +32,7 @@
         <module>demo-07-upload</module>
         <module>demo-08-cache-redis</module>
         <module>demo-09-email</module>
+        <module>demo-10-task</module>
     </modules>
 
     <dependencyManagement>
