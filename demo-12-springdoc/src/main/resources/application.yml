@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    # 开启生成 OpenAPI 描述信息
+    enabled: true
+    # OpenAPI JSON 的访问路径
+    path: /v3/api-docs
+  swagger-ui:
+    # 自定义 Swagger UI 的访问路径 (默认是 /swagger-ui.html)
+    path: /swagger-ui/index.html
+    # 按字母顺序排列接口
+    operationsSorter: alpha
+    tagsSorter: alpha
+    # 禁用显示默认的模型（为了界面清爽）
+    defaultModelsExpandDepth: -1

@@ -34,6 +34,7 @@
         <module>demo-09-email</module>
         <module>demo-10-task</module>
         <module>demo-11-smart-doc</module>
+        <module>demo-12-springdoc</module>
     </modules>
 
     <dependencyManagement>
