@@ -33,6 +33,7 @@
         <module>demo-08-cache-redis</module>
         <module>demo-09-email</module>
         <module>demo-10-task</module>
+        <module>demo-11-smart-doc</module>
     </modules>
 
     <dependencyManagement>

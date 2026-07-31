@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.example</groupId>
+        <artifactId>springboot-jdk25-demo</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>demo-11-smart-doc</artifactId>
+    <name>demo-11-smart-doc</name>
+    <description>Demo project for Smart-Doc (Zero-Annotation API Docs)</description>
+
+    <dependencies>
+        <!-- Web 依赖，包含 RESTful Controller -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 测试依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot 插件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            
+            <!-- Smart-Doc Maven 插件 -->
+            <plugin>
+                <groupId>com.ly.smart-doc</groupId>
+                <artifactId>smart-doc-maven-plugin</artifactId>
+                <!-- 请使用最新版本以更好地支持 JDK 21/25 特性 -->
+                <version>3.0.7</version>
+                <configuration>
+                    <!-- 指定生成文档的配置文件路径 -->
+                    <configFile>./src/main/resources/smart-doc.json</configFile>
+                    <!-- 指定项目名称 -->
+                    <projectName>SpringBoot JDK25 SmartDoc 演示</projectName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <!-- 绑定到 compile 阶段，每次编译自动生成文档 -->
+                        <phase>compile</phase>
+                        <goals>
+                            <!-- 生成 html 格式的文档 -->
+                            <goal>html</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

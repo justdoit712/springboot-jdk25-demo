@@ -1,0 +1,8 @@
+{
+  "serverUrl": "http://127.0.0.1:8080",
+  "isStrict": false,
+  "allInOne": true,
+  "outPath": "src/main/resources/static/doc",
+  "projectName": "Spring Boot 3 Smart-Doc 零侵入文档演示",
+  "packageFilters": "com.justdoit712.springboot.demo.smartdoc.controller.*"
+}
