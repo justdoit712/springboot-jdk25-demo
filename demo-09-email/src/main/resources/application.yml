@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  mail:
+    # SMTP 服务器地址，例如 smtp.qq.com 或 smtp.163.com
+    host: smtp.qq.com
+    # SMTP 端口，默认是 25，或者 SSL 端口 465 / 587
+    port: 465
+    # 你的邮箱账号
+    username: your-email@qq.com
+    # 你的邮箱授权码，不是登录密码！(需在邮箱设置中开启 SMTP 服务并获取)
+    password: your-auth-code
+    # 协议
+    protocol: smtps
+    # 默认编码
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          # 开启 SSL/TLS 安全验证
+          ssl:
+            enable: true
+          # 开启 STARTTLS
+          starttls:
+            enable: true
+            required: true
+
+# 自定义属性，方便在服务中引用发件人
+project:
+  email:
+    from: ${spring.mail.username}

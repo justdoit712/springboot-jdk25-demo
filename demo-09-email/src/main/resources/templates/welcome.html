@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎邮件</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f7f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 24px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 32px 24px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .content h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 16px;
+            text-align: center;
+            font-size: 12px;
+            color: #777777;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>欢迎加入 SpringBoot JDK25 Demo</h1>
+        </div>
+        <div class="content">
+            <h2>你好, <span th:text="${username}">开发者</span>!</h2>
+            <p>感谢你关注并使用我们的 SpringBoot JDK25 实战项目。</p>
+            <p>这是一封由 Thymeleaf 模板引擎渲染生成的 HTML 测试邮件。通过整合 <code>spring-boot-starter-mail</code>，你可以轻松地在 Spring Boot 应用中发送这种富文本格式的邮件。</p>
+            <p>如果你有任何问题或建议，欢迎随时反馈！</p>
+            <a href="https://github.com/justdoit712/springboot-jdk25-demo" class="btn">访问项目主页</a>
+        </div>
+        <div class="footer">
+            &copy; 2026 justdoit712. All rights reserved.<br>
+            此邮件为系统自动发送，请勿直接回复。
+        </div>
+    </div>
+</body>
+</html>
