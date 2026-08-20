@@ -37,6 +37,7 @@
         <module>demo-12-springdoc</module>
         <module>demo-13-spring-data-jdbc</module>
         <module>demo-14-log-aop</module>
+        <module>demo-15-spring-security</module>
     </modules>
 
     <dependencyManagement>
